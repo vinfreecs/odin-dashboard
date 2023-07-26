@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 12% auto auto;
+    height: 100%;
+}
+header{
+    background-color: aqua;
+    grid-column: 2/4;
+}
+.sidebar{
+    background-color: rgb(165, 72, 72);
+    grid-row: 1/4;
+}
+.card{
+    height: 150px;
+}
+.project{
+    grid-row: 2/4;
+}
+.project-grid{
+    background-color: rgb(97, 97, 174);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+}
+.announcements{
+    background-color: yellow;
+    grid-column: 3/4;
+}
+.trending{
+    background-color: aquamarine;
+    grid-column: 3/4;
+}
