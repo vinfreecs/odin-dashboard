@@ -2,39 +2,187 @@
     margin: 0;
     padding: 0;
 }
-body{
-    height: 100vh;
+html,body{
+    height: 100%;
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 12% auto auto;
+    grid-template-columns: 1fr 3.5fr 1fr;
+    grid-template-rows: 20% 40% 40%;
     height: 100%;
 }
 header{
     background-color: aqua;
     grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1fr 1fr;
+}
+.searchbar svg{
+    height: 25px;
+}
+.searchbar{
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-content: center;
+    justify-items: center;
+    padding-left: 40px;
+}
+.searchbar input{
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(83, 80, 80);
+    justify-self: stretch;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 40px 50px 200px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.welcome{
+    display: grid;
+    grid-template-columns: 80px auto;
+    align-items: center;
+    align-content: center;
+    padding-left: 40px;
+}
+.welcome img{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    justify-self: center;
+}
+.welcome-info{
+    font-weight: 700;
+}
+.welcome-info p{
+    font-size: 14px;
+}
+.welcome-info h3{
+    font-size: 24px;
+}
+.operation{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-content: center;
+    justify-items: center;
+}
+.operation button{
+    height: 40px;
+    width: 70%;
+    border-radius: 32px;
+    border: 1px solid black;
+    background-color: brown;
+}
+.profile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.profile svg{
+    height: 25px;
 }
 .sidebar{
     background-color: rgb(165, 72, 72);
     grid-row: 1/4;
+    display: grid;
+    grid-template-rows: 10% 250px 150px;
+}
+.sidebar div{
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+    justify-items: center;
+}
+.first-ul{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+}
+.second-ul{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    margin-top: 20px;
+}
+.first-ul li,
+.second-ul li{
+    display: grid;
+    grid-template-columns: 30px auto;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    padding-left: 20px;
+    gap: 12px;
+}
+.sidebar svg{
+    height: 25px;
+}
+.logo svg{
+    height: 40px;
 }
 .card{
-    height: 150px;
+
+    background-color: rgb(161, 106, 212);
+    height: 180px;
+    border-left: 4px solid rgb(60, 60, 3);
+    padding: 4px;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 8fr 2fr;
+}
+.card-buttons{
+    align-self: center;
+    justify-self: end;
+
+}
+.card-buttons svg{
+    height: 20px;
 }
 .project{
     grid-row: 2/4;
+    display: grid;
+    grid-template-rows: 50px 1fr;
 }
 .project-grid{
-    background-color: rgb(97, 97, 174);
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(50%,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 10px;
+    place-items: center;
 }
 .announcements{
     background-color: yellow;
     grid-column: 3/4;
+    display: grid;
+    grid-template-rows: 30px auto auto auto;
+    margin-top: 20px;
+}
+.announcements h3{
+    padding: 5px;
+}
+.announcement{
+    place-self: center;
+    padding: 10px;
+    font-size: 14px;
 }
 .trending{
     background-color: aquamarine;
     grid-column: 3/4;
+    display: grid;
+    grid-template-rows: 30px auto auto auto auto;
+    margin-top: 20px;
+}
+.trending img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    align-self: center;
+}
+.people{
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+.people h4{
+    font-weight: 600;
+    align-self: center;
 }
